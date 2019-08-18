@@ -1,0 +1,588 @@
+/*
+ * top right bottom left
+ *
+ * or
+ *
+ * t+b l+r
+ *
+ */
+
+/*
+
+	font-family: Helvetica, Arial, "Nimbus Sans L", FreeSans, sans-serif;
+	font-family: "Palatino", "Palatino Linotype", Georgia, "Times", "Times New Roman", serif;
+
+	logo red:
+	color: #b12316;
+
+	body text:
+	color: #333;
+
+	header gray:
+	color: #555;
+
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+html {overflow-y: scroll;}
+
+body {
+	font-family: Helvetica, "Nimbus Sans L", Arial, FreeSans, sans-serif;
+	font-size: 14px;
+	color: #333;
+	line-height: 100%;
+	/*background-image: url("../data/images/fon.jpg");*/
+	background-color: Gray;
+}
+
+hr {
+	height: 3em;
+	/*background-color: yellow;*/
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: bold;
+	line-height: 1.25em;
+	margin-bottom: 0.5em;
+}
+
+h1 {
+	font-size: 30px;
+	/*color: #b12316;*/
+	/*color:  #174d73;*/
+	color : black;
+	letter-spacing: -0.05em;
+}
+
+h2 {
+	font-size: 22px;
+	color: #555;
+}
+
+div#shell {
+	width: 820px;
+	margin: 0 auto;
+	padding: 0 25px;
+	background-color:white;
+}
+
+div#header {
+	height: 124px;
+
+	background-image: url('../data/images/blackboard-2.jpg');
+}
+
+div#shellBctp {
+	width: 181px;
+	float: left;
+}
+
+div#shellTitle {
+	margin-left: 181px;
+}
+
+div#bctpLogo {
+	width: 72px;
+	height: 72px;
+
+	position: relative;
+	top: 26px;
+	left: 55px;
+
+	background-image: url('../data/images/bctp.png');
+}
+
+div#title {
+	/*font-size: 32px;
+	font-weight: bold;
+	text-align: right;
+	letter-spacing: -0.07em;
+	color: white;
+	text-shadow: 0.05em 0.05em 0.3em #000;
+	padding: 40px 20px 0 0;
+	margin-bottom: 10px;*/
+
+	height: 75px;
+	background-image: url('../data/images/bctp-title.png');
+	background-position: right 37px;
+	background-repeat: no-repeat;
+	margin-right: 18px;
+}
+
+div#menu {
+	/*font-weight: bold;
+	margin-top: 130px;
+	font-size: 16px;
+	letter-spacing: +0.05em;
+	color: white;
+	padding: 4px 20px 0 0;*/
+	border: 1px solid gray;
+	font-weight: bold;
+	font-size: 16px;
+	letter-spacing: +0.05em;
+	color: white;
+	height: 26px;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	padding-top: 1.1em;
+	margin-top: 170px;
+	background-color: #efefef;
+}
+
+div#menu a {
+	/*background-color: #174d73;
+	background-color: black;
+	color: #333;
+	text-decoration: none;
+	text-shadow: none;
+	padding-left: 2px;
+	padding-right: 2px;
+	border-radius: 5px;*/
+
+	color: black;
+	text-decoration: none;
+	text-shadow: none;
+	padding-left: 5px;
+	padding-right: 5px;
+	height: 26px;
+	margin: 10px 10px 10px 10px;
+}
+
+div#menu a:hover {
+	text-shadow: none;
+	color: white;
+	/*background-color: white;*/
+	background-color: gray;
+}
+
+div#menu a:visited {
+	/*color: black;
+	text-decoration: none;*/
+	text-decoration: none;
+}
+
+div#menu a:visited:hover {
+	/*text-shadow: none;
+	color: #333;
+	background-color: white;*/
+	text-shadow: none;
+}
+
+div#menu ul {
+	/*display: inline;*/
+	background-color: #efefef;
+	/*display: inline;*/
+	border: 1px solid gray;
+	display: inline;
+	margin-left: 3.5em;
+	/*padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;*/
+}
+
+div#menu ul li {
+	text-shadow: 0.05em 0.05em 0.25em black;
+	text-align: center;
+	list-style: none;
+	display: inline;
+	/*margin-left: 10px;*/
+}
+
+div#menu ul li.menuSelected {
+	text-shadow: none;
+	color: #333;
+	text-align: center;
+}
+
+div#menu ul li.menuSelected a {
+	color: #333;
+	/*background-color: white;*/
+}
+
+
+div#shellContent {
+	clear: both;
+	overflow: auto;
+
+	border: 1px #9a9a9a solid;
+
+	/*background-image: url('../data/images/uni-bonn.png');
+	background-repeat: no-repeat;
+	background-position: 20px bottom;*/
+}
+
+div#navigation {
+	line-height: 1.25em;
+
+	width: 180px;
+	float: left;
+
+	border-right: 1px #9a9a9a solid;
+}
+
+div#navigation img.center {
+	display: block;
+	margin: 0 auto;
+	padding-bottom: 2em;
+}
+
+
+div#navigation a {
+	color: #333;
+	text-decoration: none;
+}
+
+div#navigation a:hover {
+}
+
+div#navigation a:visited {
+	color: #333;
+	text-decoration: none;
+}
+
+div#navigation a:visited:hover {
+}
+
+div#navigation ul {
+	list-style: none;
+	text-align: center;
+	/*border-top: 1px #9a9a9a solid;*/
+	margin-bottom: 0px;
+}
+
+div#navigation ul#firstNavigation {
+	border-top: 0;
+}
+
+div#navigation ul li {
+	background-color: #efefef;
+	padding: 5px 20px;
+	border-top: 1px #9a9a9a solid;
+}
+
+div#navigation ul li:first-child {
+	border-top: 0;
+}
+
+div#navigation ul li:last-child {
+	border-bottom: 1px #9a9a9a solid;
+}
+
+div#navigation ul li:hover {
+	background-color: #9a9a9a;
+	text-shadow: 0.05em 0.05em 0.25em black;
+}
+
+div#navigation ul li.navSelected:hover {
+	text-decoration: none;
+}
+
+div#navigation ul li:first-child:hover {
+	border-top: 0;
+}
+
+div#navigation ul li.navSelected {
+	font-weight: bold;
+	text-shadow: 0.05em 0.05em 0.25em black;
+	background-image: url('../data/images/blackboard-2.jpg');
+	color: white;
+}
+
+div#navigation ul li:hover a {
+	color: white;
+	text-shadow: 0.05em 0.05em 0.25em black;
+}
+
+div#content {
+	line-height: 1.25em;
+	/*EDITÉ*/
+	padding: 20px 20px 2em 20px;
+	padding-top: 3em;
+	margin: 0 0 0 180px;
+	min-height: 300px;
+
+	border-left: 1px #9a9a9a solid;
+}
+
+div#content form.semesters {
+	margin-top: 1.5em;
+	margin-bottom: 3em;
+}
+
+div#content form.semesters select {
+	font-family: Helvetica, "Nimbus Sans L", Arial, FreeSans, sans-serif;
+	font-size: 1em;
+	width: 125px;
+}
+
+div#content form label {
+	font-weight: bold;
+}
+
+div#content .nodisplay {
+	display: none;
+}
+
+div#content .fundingNumber {
+	font-weight: bold;
+}
+
+div#content p {
+	margin-bottom: 1em;
+}
+
+div#content .emph {
+	font-style: italic;
+}
+
+div#content a {
+	color: #333;
+	text-decoration: none;
+	border-bottom: 1px #333 dotted;
+}
+
+div#content a:hover {
+	color: #b12316;
+	border-bottom: 1px #b12316 solid;
+}
+
+div#content ul {
+	list-style: square;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 2em;
+	line-height: 1.5em;
+	}
+
+div#content ul.pubList {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+div#content ul.groupsList li {
+	margin-bottom: 0.5em;
+}
+
+div#content ul.pubList li {
+	margin-bottom: 1em;
+}
+
+div#content ul.pubList li .pubTitle {
+	font-weight: bold;
+}
+
+div#content ul.pubList li .pubArxiv {
+	font-size: 12px;
+}
+
+div#content ul.fundingList li {
+	margin-bottom: 2em;
+}
+
+div#content .news {
+	margin-bottom: 2.5em;
+	padding-bottom: 1em;
+	border-bottom: solid 1px #9a9a9a;
+}
+
+div#content .news h4 {
+	font-size: 14px;
+}
+
+div#content .newsHeaderShell {
+	overflow: hidden;
+}
+
+div#content div.newsHeader {
+	float: left;
+	width: 80%;
+}
+
+div#content div.newsDate {
+	float: right;
+	width: 20%;
+	color: #555;
+	text-align: right;
+}
+
+div#content div.newsBody {
+	overflow: hidden;
+}
+
+div#content div.newsPicture {
+	margin: 0 0 5px 5px;
+	float:right
+}
+
+div#content div.newsPicture img {
+	padding: 5px;
+	border: 1px #ddd solid;
+}
+
+div#content div.newsPicture a {
+	border: none;
+}
+
+div#content .disabledLink {
+	color: #ddd;
+}
+
+div#content .disabled {
+	color: #ddd;
+}
+
+div#content .center {
+	text-align: center;
+}
+
+table.listTable {
+	text-align: left;
+
+	border-collapse: collapse;
+	width: 100%;
+	margin-bottom: 2em;
+}
+
+table.listTable th {
+	padding: 5px 8px;
+	border-bottom: 2px solid #b12316;
+}
+
+table.listTable td {
+	border-bottom: 1px solid #ddd;
+	padding: 6px 8px;
+	vertical-align: top;
+}
+
+table.listTable tbody tr:hover td {
+	color: #b12316;
+}
+
+table.cardTable {
+	margin-bottom: 2em;
+}
+
+table.cardTable td {
+	padding-bottom: 0.75em;
+	text-align: left;
+}
+
+table.cardTable td.headerCell {
+	padding-right: 5px;
+	text-align: right;
+	vertical-align: top;
+	color: #999;
+}
+
+table.centerTable {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table.eventsTable {
+	border-collapse: collapse;
+	width: 100%;
+	margin-bottom: 2em;
+	text-align: left;
+}
+
+table.eventsTable th {
+	padding: 5px 8px;
+	border-bottom: 2px solid #b12316;
+}
+
+table.eventsTable td {
+	border-bottom: 1px solid #ddd;
+	padding: 6px 8px;
+	vertical-align: top;
+}
+
+table.eventsTable th.dateColumnCell {
+	width: 55px;
+}
+
+table.eventsTable tbody tr:hover td {
+	color: #b12316;
+}
+
+div#seminarKindsContainer {
+	font-size: 12px;
+	margin-bottom: 1em;
+}
+
+div#content img.framed {
+	padding: 10px;
+	border: 1px #ddd solid;
+}
+
+table.membersTable {
+	border-collapse: collapse;
+	width: 100%;
+	text-align: left;
+	margin-top: 20px;
+}
+
+table.membersTable td {
+	border-bottom: 1px solid #ddd;
+	padding: 6px 8px;
+}
+
+table.membersTable tr:hover td {
+	color: #b30000;
+}
+
+/*
+table.membersTable h2:before {
+	content: "\00BB \0020";
+}
+*/
+
+table.membersTable .columnToTop {
+	font-size: 12px;
+	padding-bottom: 40px;
+	border: 0;
+}
+
+div#footer {
+	font-size: 12px;
+	text-shadow: 0.05em 0.05em 0.25em black;
+	color: white;
+
+	padding: 7px 20px 0 20px;
+	height: 22px;
+
+	clear: both;
+
+	background-image: url('../data/images/blackboard-2.jpg');
+}
+
+div#footer a {
+	color: white;
+}
+
+div#footer a:hover {
+	background-color: white;
+	text-shadow: none;
+	color: #333;
+	text-decoration: none;
+}
+
+div#footer a:visited {
+	color: white;
+}
+
+div#footer a:visited:hover {
+	background-color: white;
+	color: #333;
+	text-decoration: none;
+}
+
+div .spacer {
+	border-right: 1px #9a9a9a solid;
+	border-left: 1px #9a9a9a solid;
+	height: 10px; background-color: white;
+}
